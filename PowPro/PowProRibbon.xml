@@ -3,27 +3,23 @@
   <ribbon startFromScratch="false">
     <tabs>
       <tab id="PowProRibbonTab" label="PowPro" visible="true" insertAfterMso="TabHome">
-        <!--<group label="Arrange" id="arrangeGroup">
+          <!--<group label="Arrange" id="arrangeGroup">
           
-          <button onAction="createCircle" label="Circle" id="arrangeCircle_button" imageMso="DiagramCycleInsertClassic" size="normal" getSupertip="getSupertip" getEnabled="atLeastTwoObjectsSelected"/>
-          <button onAction="spreadObjects" label="Spread" id="spreadObjects_button" imageMso="HorizontalSpacingIncrease" size="normal" getSupertip="getSupertip" getEnabled="atLeastTwoObjectsSelected"/>
-          <button onAction="compressObjects" label="Compress" id="compressObjects_button" imageMso="HorizontalSpacingDecrease" size="normal" getSupertip="getSupertip" getEnabled="atLeastTwoObjectsSelected"/>
+            <button onAction="createCircle" label="Circle" id="arrangeCircle_button" imageMso="DiagramCycleInsertClassic" size="normal" getSupertip="getSupertip" getEnabled="atLeastTwoObjectsSelected"/>
+            <button onAction="spreadObjects" label="Spread" id="spreadObjects_button" imageMso="HorizontalSpacingIncrease" size="normal" getSupertip="getSupertip" getEnabled="atLeastTwoObjectsSelected"/>
+            <button onAction="compressObjects" label="Compress" id="compressObjects_button" imageMso="HorizontalSpacingDecrease" size="normal" getSupertip="getSupertip" getEnabled="atLeastTwoObjectsSelected"/>
           
-        </group>-->
-          <!--<group id="alignGroup" label="Align">
-            <button id="cmdSameAngle" label="Same angle" imageMso="Repeat" size="normal" onAction="makeSameAngle" getEnabled="atLeastTwoObjectsSelected" getSupertip="getSupertip" />
-            <button id="cmdAlignVertical" label="Align horizontally" size="normal" onAction="centerVertical" getEnabled="atLeastTwoObjectsSelected" imageMso="ObjectsAlignCenterHorizontal" getSupertip="getSupertip" />
-            <button id="cmdAlignHorizontal" label="Align vertically" imageMso="ObjectsAlignMiddleVertical" size="normal" onAction="centerHorizontal" getEnabled="atLeastTwoObjectsSelected" getSupertip="getSupertip" />
-
-            <button id="cmdCenterBoth" label="Center" getImage="loadImage" size="normal" onAction="centerOfSlideBoth" getEnabled="atLeastOneObjectsSelected" getSupertip="getSupertip" />
-            <button id="cmdCenterHorizontally" label="Center horizontally" getImage="loadImage" size="normal" onAction="centerOfSlideHorizontally" getEnabled="atLeastOneObjectsSelected" getSupertip="getSupertip" />
-            <button id="cmdCenterVertically" label="Center vertically" getImage="loadImage" size="normal" onAction="centerOfSlideVertically" getEnabled="atLeastOneObjectsSelected" getSupertip="getSupertip" />
           </group>-->
+          <group id="alignGroup" label="Align">
+            <button onAction="sameSize_onACtion" id="cmdSameSize" label="Same size" showLabel="true" imageMso="SizeToControlHeightAndWidth" size="normal" getEnabled="atLeastTwoObjectsSelected"/>
+            <button onAction="centerVertical_onAction" id="cmdAlignVertical" label="Align horizontally" size="normal" imageMso="ObjectsAlignMiddleVertical" getEnabled="atLeastTwoObjectsSelected" />
+            <button onAction="centerHorizontal_onAction" id="cmdAlignHorizontal" label="Align vertically" imageMso="ObjectsAlignCenterHorizontal" size="normal" getEnabled="atLeastTwoObjectsSelected" />
+          </group>
 
           <group id="adjustGroup" label="Adjust">
-            <button onAction="sameSize_onACtion" id="cmdSameSize" label="Same size" showLabel="true" imageMso="SizeToControlHeightAndWidth" size="normal" getEnabled="atLeastTwoObjectsSelected"/>
             <button onAction="sameHeight_onAction" id="cmdSameHeight" label="Same height" showLabel="true" imageMso="SizeToControlHeight" size="normal" getEnabled="atLeastTwoObjectsSelected"/>
             <button onAction="sameWidth_onACtion" id="cmdSameWidth" label="Same width" showLabel="true" imageMso="SizeToControlWidth" size="normal" getEnabled="atLeastTwoObjectsSelected"/>
+            <button onAction="sameRotation_onAction" id="cmdSameAngle" label="Same rotation" size="normal" imageMso="Repeat" getEnabled="atLeastTwoObjectsSelected" />
             <button onAction="swap_onAction" id="swap_button" label="Swap" imageMso="CircularReferences" size="normal" getSupertip="getSupertip" getEnabled="exactlyTwoObjectSelected"/>
           </group>
          

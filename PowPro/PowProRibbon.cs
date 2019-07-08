@@ -53,13 +53,11 @@ namespace PowPro
         {
             getCurrentApplication().SlideSelectionChanged += PowProRibbon_SlideSelectionChanged;
             getCurrentApplication().WindowSelectionChange += PowProRibbon_WindowSelectionChange;
-            System.Windows.Forms.MessageBox.Show("Ribbon_Load");
             this.ribbon = ribbonUI;
         }
 
         public bool RibbonLoaded(Office.IRibbonControl ribbonControl)
         {
-            System.Windows.Forms.MessageBox.Show("RibbonLoaded");
             return true;
         }
 

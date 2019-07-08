@@ -37,6 +37,12 @@ namespace PowPro
             else return false;
         }
 
+        public bool atLeastOneObjectsSelected(Office.IRibbonControl control)
+        {
+            if (selectedShapesCount() >= 1) return true;
+            else return false;
+        }
+
         #region event handlers
         private void PowProRibbon_WindowSelectionChange(Microsoft.Office.Interop.PowerPoint.Selection Sel)
         {

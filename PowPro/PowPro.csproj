@@ -154,6 +154,7 @@
   -->
   <ItemGroup>
     <Compile Include="Classes\Point.cs" />
+    <Compile Include="Controllers\Align_Controller.cs" />
     <Compile Include="Controllers\Selection_Controller.cs" />
     <Compile Include="Controllers\Shape_Controller.cs" />
     <Compile Include="Controllers\Adjust_Controller.cs" />

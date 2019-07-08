@@ -13,23 +13,39 @@ namespace PowPro
     {
         public static Point getShapeCenter(PowerPoint.Shape myShape)
         {
-            //return myShape.ZOrderPosition;
             Point shapeCenter = new Point();
-            shapeCenter.X = myShape.Left + (myShape.Width / 2);
-            shapeCenter.Y = myShape.Top + (myShape.Height / 2);
+            shapeCenter.X = getShapeHorizontalCenter(myShape);
+            shapeCenter.Y = getShapeVerticalCenter(myShape);
             return shapeCenter;
         }
 
-        internal static void moveShapeCenter(PowerPoint.Shape shape, Point newShapeCenter)
+        public static float getShapeHorizontalCenter(PowerPoint.Shape myShape)
         {
-            shape.Left = newShapeCenter.X - (shape.Width / 2);
-            shape.Top = newShapeCenter.Y - (shape.Height / 2);
+            return myShape.Left + (myShape.Width / 2);
+        }
+        public static float getShapeVerticalCenter(PowerPoint.Shape myShape)
+        {
+            return myShape.Top + (myShape.Height / 2);
         }
 
-        internal static void setShapeZOrder(PowerPoint.Shape shape, int newShapeZOrder)
+        public static void moveShapeCenter(PowerPoint.Shape shape, Point newShapeCenter)
         {
-            //MessageBox.Show(shape.Name + ": move to ZOrder " + newShapeZOrder);
-            
+            moveShapeHorizontalCenter(shape, newShapeCenter.X);
+            moveShapeVerticalCenter(shape, newShapeCenter.Y);
+        }
+
+        public static void moveShapeHorizontalCenter(PowerPoint.Shape shape, float newShapeHorizontalCenter)
+        {
+            shape.Left = newShapeHorizontalCenter - (shape.Width / 2);
+        }
+
+        public static void moveShapeVerticalCenter(PowerPoint.Shape shape, float newShapeVerticalCenter)
+        {
+            shape.Top = newShapeVerticalCenter - (shape.Height / 2);
+        }
+
+        public static void setShapeZOrder(PowerPoint.Shape shape, int newShapeZOrder)
+        {            
             while (shape.ZOrderPosition < newShapeZOrder)
                 shape.ZOrder(Office.MsoZOrderCmd.msoBringForward);
             while (shape.ZOrderPosition > newShapeZOrder)
